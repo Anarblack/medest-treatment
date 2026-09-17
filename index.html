@@ -29,6 +29,7 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .brand{font:600 26px var(--serif);letter-spacing:.02em}
 .brand span{color:var(--acc-soft)}
+.brand small{font-size:inherit}
 .nav ul{list-style:none;display:flex;gap:6px;padding:0}
 .nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--txt-muted);padding:8px 12px;border-radius:999px}
 .nav a:hover,.nav a.on{color:var(--txt);background:var(--panel)}
@@ -140,25 +141,77 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 @media (max-width:900px){
   .g3,.g4{grid-template-columns:repeat(2,1fr)}
-  .toc{grid-template-columns:1fr}
+  .toc{grid-template-columns:1fr;gap:10px;margin-top:36px}
+  .toc a{flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
+  .toc .n{font-size:30px;width:44px}
+  .toc h3{font-size:17px}
+  .toc p{font-size:13px;line-height:1.35}
   .ref{grid-template-columns:1fr}
-  .nav ul{display:none}
+  .nav .wrap{height:56px;gap:10px}
+  .brand{font-size:22px;white-space:nowrap;flex-shrink:0}
+  .brand small{display:none}
+  .nav ul{gap:2px;flex-shrink:1;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav a{padding:6px 6px;font-size:12px}
+  .nav a b{margin-right:3px}
+  .head .num{font-size:72px}
 }
 @media (max-width:640px){
-  .g2,.g3,.g4{grid-template-columns:1fr}
-  .head{grid-template-columns:1fr;gap:6px}
-  .scene{grid-template-columns:1fr;gap:8px}
-  .scene dl{grid-template-columns:1fr}
-  .frame{grid-template-columns:1fr}
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .g2,.g3,.g4{grid-template-columns:1fr;gap:10px}
+  .card{padding:16px 16px 14px;border-radius:12px}
+  .card h4{font-size:14px}
+  .card p{font-size:14.5px}
+  .head{grid-template-columns:1fr;gap:4px;margin-bottom:32px}
+  .head .num{font-size:56px}
+  .head h2{font-size:36px}
+  .head p{font-size:15.5px;margin-top:8px}
+  section.block{padding-block:56px}
+  h3.sub{font-size:24px;margin:36px 0 14px}
+  .person .age{font-size:36px}
+  .scene{grid-template-columns:1fr;gap:6px;padding:20px 0}
+  .scene .k{font-size:36px}
+  .scene h4{font-size:19px;margin-bottom:8px}
+  .scene dl{grid-template-columns:1fr;gap:2px;font-size:14.5px}
+  .scene dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+  .scene dd.vo{font-size:17px}
+  .sc-head{margin:40px 0 8px;gap:12px;flex-wrap:wrap}
+  .sc-head .k{font-size:30px}
+  .sc-head h3{font-size:19px}
+  .sc-head span{margin-left:0;width:100%;font-size:13px}
+  .frame{grid-template-columns:1fr;gap:14px;padding:18px 0}
   .frame.alt figure{order:0}
-  .hero .wrap{padding-block:72px 48px}
+  .frame img{border-radius:8px}
+  .frame h4{font-size:23px}
+  .frame .act{font-size:14.5px}
+  .frame .vo p{font-size:19px}
+  .frame .cam{font-size:13px}
+  .frame .t{gap:10px}
+  .pack{padding:36px 18px;border-radius:12px;margin-top:32px}
+  .votable td:first-child{width:78px;font-size:12px;padding-right:8px}
+  .votable td:last-child{font-size:17px}
+  .video{border-radius:8px}
+  .ref ul{padding-left:18px;font-size:14.5px}
+  .linkline{font-size:14px}
+  footer{padding:32px 0 40px;font-size:13px}
+  footer .wrap{flex-direction:column;gap:6px}
+  /* герой: картинка сверху, текст под ней, без наложения на лица */
+  .hero{min-height:0;display:block}
+  .hero img{position:static;width:100%;height:auto;aspect-ratio:4/3;opacity:1;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+  .hero:after{display:none}
+  .hero .wrap{padding-block:0 40px;margin-top:-64px}
+  .hero h1{font-size:44px;margin:10px 0 14px}
+  .lead{font-size:17px}
+  .chips{gap:8px;margin-top:20px}
+  .chip{font-size:13px;padding:6px 11px}
 }
 </style>
 </head>
 <body>
 
 <nav class="nav"><div class="wrap">
-  <div class="brand">Med<span>est</span> · ролик</div>
+  <div class="brand">Med<span>est</span><small> · ролик</small></div>
   <ul>
     <li><a href="#scenario"><b>01</b>Сценарий</a></li>
     <li><a href="#treatment"><b>02</b>Тритмент</a></li>

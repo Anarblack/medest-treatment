@@ -3,364 +3,287 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Medest — рекламный ролик: сценарий и тритмент</title>
-<meta name="description" content="Имиджевый рекламный ролик для медицинского центра «Медест»: сценарий для заказчика, тритмент с раскадровкой и закадровым текстом, референс.">
+<title>Medest — рекламный ролик «Мозаика здоровья»: сценарий и тритмент</title>
+<meta name="description" content="Рекламный ролик для медицинского центра Medest: сценарий, тритмент с раскадровкой и закадровым текстом, мудборд.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap">
 <style>
 :root{
-  --bg:#15181B; --panel:#1F2327; --line:#2C3136;
-  --light:#F4F1EC; --light-panel:#FBF9F5; --light-line:#DDD7CE;
-  --ink:#1B1E21; --ink-muted:#565B62; --txt:#EDE8E1; --txt-muted:#A9A39A;
-  --acc:#8A2E3B; --acc-soft:#D98A94;
-  --serif:'Cormorant Garamond',Georgia,serif; --sans:'IBM Plex Sans',Arial,sans-serif;
+  --navy:#22364C; --navy-2:#1A2A3B; --blue:#3F6F8F; --blue-soft:#8FB3C9;
+  --sand:#D9C7B0; --sand-soft:#F1EAE0; --grey:#C9CDD2;
+  --bg:#F5F6F7; --panel:#FFFFFF; --line:#E1E5E9;
+  --ink:#1D2A38; --ink-muted:#5C6B7A; --on-navy:#EAF0F5; --on-navy-muted:#A9BAC9; --navy-line:#34495F;
+  --display:'Jost','Trebuchet MS',Arial,sans-serif; --sans:'Inter',Arial,sans-serif;
   --w:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--txt);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3,h4,p,ul,ol{margin:0}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.caps{font:500 12.5px/1.3 var(--display);letter-spacing:.2em;text-transform:uppercase}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:20;background:rgba(21,24,27,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(245,246,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.brand{font:600 26px var(--serif);letter-spacing:.02em}
-.brand span{color:var(--acc-soft)}
-.brand small{font-size:inherit}
-.nav ul{list-style:none;display:flex;gap:6px;padding:0}
-.nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--txt-muted);padding:8px 12px;border-radius:999px}
-.nav a:hover,.nav a.on{color:var(--txt);background:var(--panel)}
-.nav a b{color:var(--acc-soft);font-weight:600;margin-right:6px}
+.brand{font:400 24px/1 var(--display);letter-spacing:.14em;color:var(--navy);white-space:nowrap}
+.brand small{font-size:12px;letter-spacing:.2em;color:var(--ink-muted);margin-left:14px;padding-left:14px;border-left:1px solid var(--grey)}
+.nav ul{list-style:none;display:flex;gap:4px;padding:0}
+.nav a{text-decoration:none;font:500 13px var(--display);letter-spacing:.08em;color:var(--ink-muted);padding:8px 12px;border-radius:999px}
+.nav a:hover,.nav a.on{color:var(--navy);background:#E7ECF0}
+.nav a b{color:var(--blue);font-weight:600;margin-right:6px}
 
 /* hero */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,24,27,.15) 0%,rgba(21,24,27,.55) 55%,var(--bg) 100%)}
-.hero .wrap{position:relative;z-index:1;padding-block:96px 72px;width:100%}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-soft)}
-.hero h1{font:500 clamp(48px,7vw,104px)/1.02 var(--serif);margin:16px 0 20px;max-width:900px}
-.hero h1 em{font-style:italic;color:var(--acc-soft)}
-.lead{font-size:clamp(18px,2vw,22px);color:var(--txt);max-width:720px;line-height:1.5}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.chip{font-size:14px;font-weight:500;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--txt-muted)}
-.chip b{color:var(--txt);font-weight:600}
-.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
-.toc a{text-decoration:none;background:rgba(31,35,39,.8);border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s}
-.toc a:hover{border-color:var(--acc-soft)}
-.toc .n{font:600 40px/1 var(--serif);color:var(--acc-soft)}
-.toc h3{font-size:19px;font-weight:600}
-.toc p{font-size:14px;color:var(--txt-muted)}
+.hero{background:var(--navy);color:var(--on-navy)}
+.hero .wrap{padding-block:72px 0}
+.hero .top{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end}
+.hero .caps{color:var(--blue-soft)}
+.hero h1{font:300 clamp(44px,6.4vw,88px)/1.02 var(--display);letter-spacing:.02em;margin:18px 0 0}
+.hero h1 b{font-weight:500;display:block;letter-spacing:.12em;font-size:.42em;color:var(--sand);margin-bottom:14px;text-transform:uppercase}
+.lead{font-size:clamp(17px,1.7vw,20px);line-height:1.55;color:var(--on-navy)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font:400 13.5px var(--display);letter-spacing:.06em;padding:7px 13px;border:1px solid var(--navy-line);border-radius:999px;color:var(--on-navy-muted)}
+.chip b{color:var(--on-navy);font-weight:500}
+.hero figure{margin-top:48px;border-radius:14px 14px 0 0;overflow:hidden;position:relative}
+.hero figure img{width:100%;aspect-ratio:2120/434;object-fit:cover}
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--navy-2)}
+.toc a{text-decoration:none;padding:26px 28px;display:flex;gap:18px;align-items:flex-start;border-right:1px solid var(--navy-line);color:var(--on-navy);transition:background .2s}
+.toc a:last-child{border-right:0}
+.toc a:hover{background:#21344A}
+.toc .n{font:300 38px/1 var(--display);color:var(--sand)}
+.toc h3{font:500 17px var(--display);letter-spacing:.1em;text-transform:uppercase}
+.toc p{font-size:13.5px;color:var(--on-navy-muted);margin-top:4px;line-height:1.45}
 
 /* sections */
-section.block{padding-block:96px}
-section.light{background:var(--light);color:var(--ink)}
-section.light .eyebrow{color:var(--acc)}
-.head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:end;margin-bottom:56px}
-.head .num{font:500 96px/1 var(--serif);color:var(--acc-soft)}
-.light .head .num{color:var(--acc)}
-.head h2{font:500 clamp(36px,4.6vw,64px)/1.08 var(--serif)}
-.head p{margin-top:12px;font-size:18px;color:var(--txt-muted);max-width:700px}
-.light .head p{color:var(--ink-muted)}
-h3.sub{font:600 30px/1.15 var(--serif);margin:56px 0 22px;padding-top:8px}
-h3.sub small{display:block;font:500 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
-.dark h3.sub small{color:var(--acc-soft)}
+section.block{padding-block:88px}
+section.tint{background:var(--sand-soft)}
+section.dark{background:var(--navy);color:var(--on-navy)}
+.head{display:grid;grid-template-columns:110px 1fr;gap:24px;align-items:end;margin-bottom:48px}
+.head .num{font:300 88px/1 var(--display);color:var(--blue)}
+.dark .head .num{color:var(--sand)}
+.head .caps{color:var(--blue)}
+.dark .head .caps{color:var(--blue-soft)}
+.head h2{font:300 clamp(34px,4.4vw,58px)/1.08 var(--display);letter-spacing:.02em;margin-top:6px}
+.head p{margin-top:12px;font-size:17px;color:var(--ink-muted);max-width:720px}
+.dark .head p{color:var(--on-navy-muted)}
+h3.sub{font:400 28px/1.2 var(--display);margin:56px 0 20px}
+h3.sub small{display:block;font:500 12.5px var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.dark h3.sub small{color:var(--blue-soft)}
 
-.grid{display:grid;gap:16px}
-.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--light-panel);border:1px solid var(--light-line);border-radius:14px;padding:22px}
-.dark .card{background:var(--panel);border-color:var(--line)}
-.card h4{font-size:15px;font-weight:600;color:var(--acc);margin-bottom:8px;letter-spacing:.02em}
-.dark .card h4{color:var(--acc-soft)}
-.card p{font-size:15.5px;color:var(--ink-muted);line-height:1.5}
-.dark .card p{color:var(--txt-muted)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card h4{font:500 13px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.card p{font-size:15px;color:var(--ink-muted);line-height:1.55}
 .card p b{color:var(--ink);font-weight:600}
-.dark .card p b{color:var(--txt)}
-.person{display:flex;flex-direction:column;gap:6px}
-.person .age{font:500 44px/1 var(--serif);color:var(--ink)}
-.person .role{font-size:15px;font-weight:600}
-.person .look{font-size:14.5px;color:var(--ink-muted)}
-.person .arc{font-size:14.5px;color:var(--ink);padding-top:8px;border-top:1px solid var(--light-line);margin-top:4px}
+.dark .card{background:#2A4058;border-color:var(--navy-line)}
+.dark .card h4{color:var(--sand)}
+.dark .card p{color:var(--on-navy-muted)}
+.dark .card p b{color:var(--on-navy)}
 
-/* scenes list (scenario) */
-.scene{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--light-line)}
-.scene:last-child{border-bottom:1px solid var(--light-line)}
-.scene .k{font:500 56px/1 var(--serif);color:var(--acc)}
-.scene h4{font-size:22px;font-weight:600;margin-bottom:12px}
-.scene dl{display:grid;grid-template-columns:120px 1fr;gap:6px 16px;font-size:15.5px}
-.scene dt{color:var(--ink-muted)}
-.scene dd{margin:0;color:var(--ink)}
-.scene dd.vo{font:italic 500 19px/1.4 var(--serif)}
+/* приём */
+.device{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.device img{border-radius:10px}
+.device ol{padding-left:20px;color:var(--ink-muted);font-size:15.5px}
+.device li{margin:8px 0}
+.device li b{color:var(--ink)}
 
-/* treatment frames */
-.sc-head{display:flex;align-items:baseline;gap:18px;margin:64px 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.sc-head .k{font:500 40px/1 var(--serif);color:var(--acc-soft)}
-.sc-head h3{font-size:24px;font-weight:600}
-.sc-head span{font-size:14px;color:var(--txt-muted);margin-left:auto}
-.frame{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start;padding:22px 0}
-.frame+.frame{border-top:1px solid var(--line)}
-.frame figure{margin:0;position:relative}
-.frame img{border-radius:10px;aspect-ratio:16/9;object-fit:cover;width:100%}
-.frame figcaption{position:absolute;left:12px;bottom:12px;font-size:12px;font-weight:600;letter-spacing:.08em;padding:5px 9px;border-radius:6px;background:rgba(21,24,27,.72);color:var(--txt)}
-.frame .t{display:flex;flex-direction:column;gap:14px}
-.frame .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--txt-muted);letter-spacing:.04em}
-.frame h4{font:600 30px/1.1 var(--serif)}
-.frame .lbl{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-muted);margin-bottom:5px}
-.frame .act{font-size:15.5px;color:var(--txt);line-height:1.55}
-.frame .vo{border-left:3px solid var(--acc-soft);padding-left:16px}
-.frame .vo p{font:italic 500 24px/1.3 var(--serif);color:var(--txt)}
-.frame .cam{font-size:14px;color:var(--txt-muted)}
-.frame.alt figure{order:2}
+/* герои */
+.hero-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.hero-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero-card .b{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px}
+.hero-card .n{font:500 12px var(--display);letter-spacing:.2em;color:var(--blue)}
+.hero-card h4{font:500 19px/1.2 var(--display)}
+.hero-card p{font-size:14px;color:var(--ink-muted);line-height:1.5}
+.hero-card .dir{font-size:13px;color:var(--ink);border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
 
-.pack{background:var(--light);color:var(--ink);border-radius:16px;padding:56px 32px;text-align:center;margin-top:48px}
-.pack .brand-big{font:500 clamp(56px,9vw,120px)/1 var(--serif)}
-.pack .slogan{font:italic 500 clamp(22px,3vw,34px)/1.3 var(--serif);margin-top:10px}
-.pack .contacts{margin-top:18px;font-size:15px;color:var(--ink-muted)}
-.pack .note{margin-top:14px;font-size:14px;color:var(--ink-muted)}
+/* кадры */
+.frame{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start;padding:36px 0;border-top:1px solid var(--navy-line)}
+.frame:first-of-type{border-top:0}
+.frame .pics{display:flex;flex-direction:column;gap:10px}
+.frame figure{position:relative}
+.frame figure img{border-radius:10px;width:100%}
+.frame figcaption{position:absolute;left:10px;top:10px;font:500 11.5px var(--display);letter-spacing:.16em;padding:5px 9px;border-radius:6px;background:rgba(26,42,59,.78);color:var(--on-navy)}
+.frame .detail{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;background:#2A4058;border-radius:10px;padding:10px}
+.frame .detail img{border-radius:6px;aspect-ratio:3/2;object-fit:cover}
+.frame .detail p{font-size:13.5px;color:var(--on-navy-muted);line-height:1.45}
+.frame .detail p b{color:var(--on-navy);font-weight:500}
+.frame .t{display:flex;flex-direction:column;gap:16px}
+.frame .meta{display:flex;justify-content:space-between;font:400 13px var(--display);letter-spacing:.1em;color:var(--on-navy-muted);text-transform:uppercase}
+.frame h4{font:400 32px/1.1 var(--display)}
+.frame .lbl{font:500 11.5px var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:5px}
+.frame .act{font-size:15px;color:var(--on-navy);line-height:1.6}
+.frame .vo{border-left:3px solid var(--sand);padding-left:16px}
+.frame .vo p{font:300 23px/1.35 var(--display);color:#fff}
+.frame .sub-t{background:var(--navy-2);border-radius:8px;padding:10px 14px}
+.frame .sub-t p{font:500 13px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy)}
+.frame .sub-t p span{display:block;font:400 14px var(--sans);letter-spacing:0;text-transform:none;color:var(--on-navy-muted);margin-top:2px}
+.frame .cam{font-size:13.5px;color:var(--on-navy-muted)}
+.frame.alt .pics{order:2}
 
 .votable{width:100%;border-collapse:collapse;margin-top:8px}
-.votable td{padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.votable td:first-child{width:110px;font-size:14px;color:var(--txt-muted)}
-.votable td:last-child{font:500 21px/1.35 var(--serif)}
-.votable tr.end td:last-child{color:var(--acc-soft)}
+.votable td{padding:12px 0;border-bottom:1px solid var(--navy-line);vertical-align:top}
+.votable td:first-child{width:120px;font:400 13px var(--display);letter-spacing:.08em;color:var(--on-navy-muted);padding-top:16px}
+.votable td:last-child{font:300 21px/1.4 var(--display);color:#fff}
+.votable tr.end td:last-child{color:var(--sand)}
 
-/* reference */
-.ref{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
-.video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--light-line)}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.ref ul{padding-left:20px;font-size:15.5px;color:var(--ink-muted)}
-.ref li{margin:6px 0}
-.ref li b{color:var(--ink)}
-.linkline{margin-top:14px;font-size:15px}
-.linkline a{color:var(--acc)}
+/* мудборд */
+.boards{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.boards a{display:block;text-decoration:none;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.boards figcaption{padding:12px 14px;font-size:13.5px;color:var(--ink-muted)}
+.swatches{display:flex;gap:12px;flex-wrap:wrap}
+.sw{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--ink-muted);align-items:center}
+.sw i{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);display:block}
+.words{display:flex;flex-wrap:wrap;gap:8px}
+.words span{font:400 14px var(--display);letter-spacing:.08em;padding:7px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
 
-footer{padding:56px 0 72px;border-top:1px solid var(--line);color:var(--txt-muted);font-size:14px}
+footer{padding:40px 0 56px;background:var(--navy-2);color:var(--on-navy-muted);font-size:13.5px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--on-navy)}
 
-@media (max-width:900px){
-  .g3,.g4{grid-template-columns:repeat(2,1fr)}
-  .toc{grid-template-columns:1fr;gap:10px;margin-top:36px}
-  .toc a{flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
-  .toc .n{font-size:30px;width:44px}
-  .toc h3{font-size:17px}
-  .toc p{font-size:13px;line-height:1.35}
-  .ref{grid-template-columns:1fr}
-  .nav .wrap{height:56px;gap:10px}
-  .brand{font-size:22px;white-space:nowrap;flex-shrink:0}
+@media (max-width:960px){
+  .g5{grid-template-columns:repeat(3,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .hero .top{grid-template-columns:1fr;gap:24px}
+  .device{grid-template-columns:1fr}
+  .boards{grid-template-columns:1fr}
   .brand small{display:none}
-  .nav ul{gap:2px;flex-shrink:1;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
-  .nav ul::-webkit-scrollbar{display:none}
-  .nav a{padding:6px 6px;font-size:12px}
-  .nav a b{margin-right:3px}
-  .head .num{font-size:72px}
 }
 @media (max-width:640px){
-  body{font-size:16px}
+  body{font-size:15.5px}
   .wrap{padding:0 18px}
-  .g2,.g3,.g4{grid-template-columns:1fr;gap:10px}
-  .card{padding:16px 16px 14px;border-radius:12px}
-  .card h4{font-size:14px}
+  .nav .wrap{height:54px;gap:8px}
+  .brand{font-size:19px;letter-spacing:.1em}
+  .nav a{padding:6px 6px;font-size:11.5px;letter-spacing:.04em}
+  .nav a b{margin-right:3px}
+  .hero .wrap{padding-block:40px 0}
+  .hero h1{font-size:40px}
+  .hero figure{margin-top:28px;border-radius:10px 10px 0 0}
+  .hero figure img{aspect-ratio:16/9}
+  .toc{grid-template-columns:1fr}
+  .toc a{border-right:0;border-bottom:1px solid var(--navy-line);padding:16px 18px;align-items:center}
+  .toc .n{font-size:28px;width:40px}
+  .toc h3{font-size:15px}
+  .toc p{font-size:13px}
+  section.block{padding-block:52px}
+  .head{grid-template-columns:1fr;gap:2px;margin-bottom:28px}
+  .head .num{font-size:52px}
+  .head h2{font-size:32px}
+  .head p{font-size:15px}
+  h3.sub{font-size:22px;margin:36px 0 14px}
+  .g2,.g3{grid-template-columns:1fr;gap:10px}
+  .g5{grid-template-columns:1fr 1fr;gap:10px}
+  .card{padding:16px}
   .card p{font-size:14.5px}
-  .head{grid-template-columns:1fr;gap:4px;margin-bottom:32px}
-  .head .num{font-size:56px}
-  .head h2{font-size:36px}
-  .head p{font-size:15.5px;margin-top:8px}
-  section.block{padding-block:56px}
-  h3.sub{font-size:24px;margin:36px 0 14px}
-  .person .age{font-size:36px}
-  .scene{grid-template-columns:1fr;gap:6px;padding:20px 0}
-  .scene .k{font-size:36px}
-  .scene h4{font-size:19px;margin-bottom:8px}
-  .scene dl{grid-template-columns:1fr;gap:2px;font-size:14.5px}
-  .scene dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
-  .scene dd.vo{font-size:17px}
-  .sc-head{margin:40px 0 8px;gap:12px;flex-wrap:wrap}
-  .sc-head .k{font-size:30px}
-  .sc-head h3{font-size:19px}
-  .sc-head span{margin-left:0;width:100%;font-size:13px}
-  .frame{grid-template-columns:1fr;gap:14px;padding:18px 0}
-  .frame.alt figure{order:0}
-  .frame img{border-radius:8px}
-  .frame h4{font-size:23px}
+  .device{padding:14px;gap:14px}
+  .device ol{font-size:14.5px}
+  .hero-card .b{padding:12px}
+  .hero-card h4{font-size:16px}
+  .hero-card p{font-size:13px}
+  .frame{grid-template-columns:1fr;gap:16px;padding:26px 0}
+  .frame.alt .pics{order:0}
+  .frame h4{font-size:25px}
   .frame .act{font-size:14.5px}
   .frame .vo p{font-size:19px}
-  .frame .cam{font-size:13px}
-  .frame .t{gap:10px}
-  .pack{padding:36px 18px;border-radius:12px;margin-top:32px}
-  .votable td:first-child{width:78px;font-size:12px;padding-right:8px}
+  .frame .detail{grid-template-columns:110px 1fr;gap:10px}
+  .frame .detail p{font-size:12.5px}
+  .votable td:first-child{width:76px;font-size:11.5px}
   .votable td:last-child{font-size:17px}
-  .video{border-radius:8px}
-  .ref ul{padding-left:18px;font-size:14.5px}
-  .linkline{font-size:14px}
-  footer{padding:32px 0 40px;font-size:13px}
+  .sw i{width:48px;height:48px}
   footer .wrap{flex-direction:column;gap:6px}
-  /* герой: картинка сверху, текст под ней, без наложения на лица */
-  .hero{min-height:0;display:block}
-  .hero img{position:static;width:100%;height:auto;aspect-ratio:4/3;opacity:1;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
-  .hero:after{display:none}
-  .hero .wrap{padding-block:0 40px;margin-top:-64px}
-  .hero h1{font-size:44px;margin:10px 0 14px}
-  .lead{font-size:17px}
-  .chips{gap:8px;margin-top:20px}
-  .chip{font-size:13px;padding:6px 11px}
 }
 </style>
 </head>
 <body>
 
 <nav class="nav"><div class="wrap">
-  <div class="brand">Med<span>est</span><small> · ролик</small></div>
+  <div class="brand">MEDEST<small>РЕКЛАМНЫЙ РОЛИК</small></div>
   <ul>
     <li><a href="#scenario"><b>01</b>Сценарий</a></li>
     <li><a href="#treatment"><b>02</b>Тритмент</a></li>
-    <li><a href="#reference"><b>03</b>Референс</a></li>
+    <li><a href="#moodboard"><b>03</b>Мудборд</a></li>
   </ul>
 </div></nav>
 
 <header class="hero">
-  <img src="img/hero.jpg" alt="Семья входит в холл клиники Medest">
   <div class="wrap">
-    <div class="eyebrow">Рекламный имиджевый ролик</div>
-    <h1>Медицинский центр <em>«Медест»</em></h1>
-    <p class="lead">Одна семья, один визит — вся клиника. Три поколения приходят в «Медест» вместе, и каждый находит здесь своего специалиста.</p>
-    <div class="chips">
-      <span class="chip"><b>1:30</b> хронометраж</span>
-      <span class="chip"><b>16:9</b> горизонтальный</span>
-      <span class="chip"><b>7</b> сцен</span>
-      <span class="chip"><b>14</b> кадров раскадровки</span>
-      <span class="chip"><b>Бишкек</b> · интерьеры клиники</span>
+    <div class="top">
+      <div>
+        <div class="caps">Рекламный ролик · медицинский центр Medest</div>
+        <h1><b>Концепция</b>Мозаика здоровья</h1>
+      </div>
+      <div>
+        <p class="lead">Одна клиника. Люди разных возрастов, профессий и национальностей. Разные направления медицины — и одна забота: о вашем здоровье.</p>
+        <div class="chips">
+          <span class="chip"><b>30–40 с</b> хронометраж</span>
+          <span class="chip"><b>1</b> статичный кадр</span>
+          <span class="chip"><b>5</b> героев</span>
+          <span class="chip"><b>5</b> направлений клиники</span>
+          <span class="chip">голос и субтитры</span>
+        </div>
+      </div>
     </div>
-    <div class="toc">
-      <a href="#scenario"><span class="n">01</span><h3>Сценарий</h3><p>Вводные, герои, локации, настроение и семь сцен — простым языком для заказчика.</p></a>
-      <a href="#treatment"><span class="n">02</span><h3>Тритмент</h3><p>Разработанные кадры и сцены: изображение, что происходит, закадровый голос.</p></a>
-      <a href="#reference"><span class="n">03</span><h3>Референс</h3><p>Ролик, по которому выстроен ритм и подача, и что именно мы из него берём.</p></a>
-    </div>
+    <figure><img src="img/v2/b0_hero.jpg" alt="Стойка приёмной Medest: пациенты на переднем плане, администраторы за стойкой"></figure>
   </div>
+  <div class="toc"><div class="wrap" style="display:contents">
+    <a href="#scenario"><span class="n">01</span><div><h3>Сценарий</h3><p>Вводные, приём, пять героев, атмосфера — простым языком.</p></div></a>
+    <a href="#treatment"><span class="n">02</span><div><h3>Тритмент</h3><p>Кадры ролика по порядку: что в кадре, голос за кадром, субтитры.</p></div></a>
+    <a href="#moodboard"><span class="n">03</span><div><h3>Мудборд</h3><p>Два листа настроения, палитра, ракурсы, звук.</p></div></a>
+  </div></div>
 </header>
 
 <!-- ===================== 01 СЦЕНАРИЙ ===================== -->
-<section class="block light" id="scenario">
+<section class="block" id="scenario">
 <div class="wrap">
   <div class="head">
     <div class="num">01</div>
     <div>
-      <div class="eyebrow">Блок первый</div>
+      <div class="caps">Блок первый</div>
       <h2>Сценарий</h2>
-      <p>Что мы снимаем, про кого и в каком настроении. Написано так, чтобы читалось без киношных терминов.</p>
+      <p>Что мы снимаем, про кого и в каком настроении. Без киношных терминов.</p>
     </div>
   </div>
 
   <h3 class="sub"><small>Вводные</small>О чём ролик</h3>
   <div class="grid g3">
-    <div class="card"><h4>Заказчик</h4><p><b>Медицинский центр «Медест», Бишкек.</b> Широкопрофильная клиника: терапия, педиатрия, ортопедия, косметология, реабилитация — ЛФК и кинезиотерапия.</p></div>
-    <div class="card"><h4>Главная мысль</h4><p>В «Медест» есть врач для каждого — <b>от новорождённых до людей преклонного возраста</b>, включая тех, кто восстанавливается после болезни или травмы. Одна клиника для всей семьи.</p></div>
-    <div class="card"><h4>Формат</h4><p>Имиджевый ролик <b>1:30</b>, горизонтальный 16:9, с закадровым голосом. Из полной версии режутся короткие — 30 и 15 секунд для соцсетей.</p></div>
-    <div class="card"><h4>Что показываем</h4><p>Не болезни, а <b>заботу</b>: как встречают, как объясняют, как помогают. Врачи заняты делом, пациенты — живые люди, а не модели.</p></div>
-    <div class="card"><h4>Где снимаем</h4><p>Все сцены с героями — <b>внутри клиники</b>: холл, кабинеты, залы. Финал — в студии на белом фоне.</p></div>
-    <div class="card"><h4>Кто в кадре</h4><p>Гости клиники всех возрастов и её сотрудники. Одежда пациентов обычная, бытовая, <b>без привязки к сезону</b>. Врачи — в сдержанной удобной форме.</p></div>
+    <div class="card"><h4>Месседж</h4><p>Medest — <b>широкопрофильный медицинский центр</b>, который заботится о здоровье людей разных возрастов и направлений: от новорождённых детей до людей преклонного возраста, а также пациентов на реабилитации.</p></div>
+    <div class="card"><h4>Главная идея</h4><p>Показать, что Medest — это <b>центр для людей любого возраста</b> и с разными потребностями в заботе о здоровье. Одна большая клиника, где каждый получает нужную ему помощь.</p></div>
+    <div class="card"><h4>Формат</h4><p><b>30–40 секунд.</b> Добрый, располагающий закадровый голос на протяжении всего ролика и <b>субтитры</b> в нижней части кадра.</p></div>
+    <div class="card"><h4>Главные герои</h4><p>Гости медицинского центра — люди <b>разных возрастов, национальностей и образа жизни</b>.</p></div>
+    <div class="card"><h4>Образы</h4><p><b>Врачи</b> — в сдержанной, удобной медицинской форме, преимущественно азиатской и славянской внешности. <b>Пациенты</b> — в повседневной одежде, без привязки к сезону или погоде.</p></div>
+    <div class="card"><h4>Где происходит</h4><p>Все сцены — <b>внутри медицинского центра</b>: в разных кабинетах, залах и функциональных пространствах клиники.</p></div>
   </div>
 
-  <h3 class="sub"><small>Герои</small>Семья, которая приходит в клинику</h3>
-  <div class="grid g3">
-    <div class="card person"><span class="age">60</span><span class="role">Бабушка</span><span class="look">Седые волосы в аккуратной укладке, очки в тонкой оправе, бордовый кардиган поверх светлой блузы.</span><span class="arc">Её история — про внимание к старшим: давление, температура, спокойное объяснение результатов.</span></div>
-    <div class="card person"><span class="age">40</span><span class="role">Отец</span><span class="look">Короткая тёмная стрижка с проседью на висках, лёгкая щетина, тёмно-синее поло.</span><span class="arc">Ведёт бабушку под руку, приходит с сыном к ортопеду. Опора семьи.</span></div>
-    <div class="card person"><span class="age">35</span><span class="role">Мама</span><span class="look">Тёмные волосы до плеч, мягкие черты, бежевый трикотажный костюм.</span><span class="arc">Её сцена — косметология: время для себя, спокойствие и доверие.</span></div>
-    <div class="card person"><span class="age">20</span><span class="role">Сын</span><span class="look">Высокий, худощавый, тёмные волосы, серое худи и джинсы.</span><span class="arc">У ортопеда: макет позвоночника, корсет, осмотр стопы. История про причину, а не симптом.</span></div>
-    <div class="card person"><span class="age">15</span><span class="role">Дочь</span><span class="look">Тёмные волосы в хвост, светло-зелёная толстовка, кроссовки.</span><span class="arc">Кинезиотерапия: сосредоточенность сменяется улыбкой. Её крупный план — эмоциональная точка ролика.</span></div>
-    <div class="card person"><span class="age" style="font-size:22px;line-height:1.6">Внешность</span><span class="role">Кого ищем на кастинге</span><span class="look">Семья и медперсонал — кыргызы, центральноазиатская внешность. Живые, неглянцевые лица.</span><span class="arc">Администратор-мужчина — славянской внешности, по брифу.</span></div>
+  <h3 class="sub"><small>Приём</small>Один кадр — вся клиника</h3>
+  <div class="device">
+    <img src="img/v2/a6_resepshn.jpg" alt="Стойка приёмной Medest — исходная точка статичного кадра">
+    <ol>
+      <li><b>Камера стоит неподвижно</b> напротив стойки приёмной медицинского центра.</li>
+      <li>На переднем плане, <b>слева направо, по очереди появляются герои</b> — сначала силуэтом, потом образом.</li>
+      <li><b>С каждым новым героем меняются фон и пространство</b>: за его спиной — уже другой кабинет и другое направление клиники.</li>
+      <li>Зритель видит одну большую клинику, которая «подстраивается» под каждого человека.</li>
+      <li>В финале кадр возвращается к стойке и логотипу Medest.</li>
+    </ol>
   </div>
 
-  <h3 class="sub"><small>Сотрудники клиники</small>Кто встречает и лечит</h3>
-  <div class="grid g4">
-    <div class="card"><h4>Администраторы</h4><p>Мужчина 30 лет (славянин, светлые волосы, аккуратная борода) и женщина 28 лет (азиатка, тёмные волосы в низкий пучок). Тёмно-синяя форма.</p></div>
-    <div class="card"><h4>Терапевт и медсестра</h4><p>Врач 45 лет, короткая стрижка, очки, белый халат. Медсестра 35 лет в голубой форме и шапочке.</p></div>
-    <div class="card"><h4>Инструктор ЛФК</h4><p>Мужчина 32 лет, спортивный, тёмно-синяя спортивная форма с логотипом клиники.</p></div>
-    <div class="card"><h4>Косметолог и ассистентка</h4><p>Женщины 38 и 25 лет, белая форма, шапочки.</p></div>
-    <div class="card"><h4>Ортопед</h4><p>Мужчина 50 лет, седеющие волосы, очки, белый халат.</p></div>
-    <div class="card"><h4>Кинезиотерапевт</h4><p>Женщина 30 лет, тёмные волосы в хвост, спортивная форма.</p></div>
-    <div class="card"><h4>Педиатр</h4><p>Женщина 40 лет, белый халат, стетоскоп. Появляется в финале — «от новорождённых».</p></div>
-    <div class="card"><h4>Форма</h4><p>Два цвета: тёмно-синий у администраторов и инструкторов, голубой/белый у медперсонала. Один тёплый акцент — бордовый.</p></div>
+  <h3 class="sub"><small>Сцена 1</small>Пять героев — пять направлений</h3>
+  <div class="grid g5">
+    <div class="hero-card"><img src="img/v2/b1_deti.jpg" alt="Девочка с игрушкой и детский врач"><div class="b"><span class="n">ГЕРОЙ 1</span><h4>Маленькая девочка</h4><p>С игрушкой в руках. На заднем плане — детский врач, который тоже держит игрушку и общается с ребёнком.</p><p class="dir">Педиатрия</p></div></div>
+    <div class="hero-card"><img src="img/v2/b2_starshie.jpg" alt="Бабушка с тростью и две сотрудницы клиники"><div class="b"><span class="n">ГЕРОЙ 2</span><h4>Бабушка</h4><p>Пожилая женщина с тростью. На заднем плане — две сотрудницы: одна заполняет данные, вторая проводит обследование.</p><p class="dir">Терапия · гериатрия · диагностика</p></div></div>
+    <div class="hero-card"><img src="img/v2/b3_aktiv.jpg" alt="Спортивный мужчина и врач с макетом позвоночника"><div class="b"><span class="n">ГЕРОЙ 3</span><h4>Спортивный мужчина</h4><p>Мужчина спортивного телосложения. Врач показывает макет позвоночника и объясняет положение спины и стоп.</p><p class="dir">Ортопедия · спортивная медицина</p></div></div>
+    <div class="hero-card"><img src="img/v2/b4_krasota.jpg" alt="Женщина в деловом образе на косметологической процедуре"><div class="b"><span class="n">ГЕРОЙ 4</span><h4>Бизнесвумен</h4><p>Женщина в деловом образе. На заднем плане специалист проводит косметологическую процедуру.</p><p class="dir">Косметология · эстетическая медицина</p></div></div>
+    <div class="hero-card"><img src="img/v2/b5_reab.jpg" alt="Дедушка с ходунками и групповое занятие ЛФК"><div class="b"><span class="n">ГЕРОЙ 5</span><h4>Дедушка</h4><p>Пожилой мужчина с ходунками. На заднем плане — групповое занятие ЛФК или кинезиотерапии.</p><p class="dir">ЛФК · кинезиотерапия · реабилитация</p></div></div>
   </div>
 
-  <h3 class="sub"><small>Локации</small>Всё внутри клиники</h3>
-  <div class="grid g4">
-    <div class="card"><h4>Холл и ресепшен</h4><p>Стеклянные двери, стойка, растения, мягкий свет.</p></div>
-    <div class="card"><h4>Кабинет терапевта</h4><p>Кушетка, стол с монитором, тонометр, настольная лампа.</p></div>
-    <div class="card"><h4>Зал ЛФК</h4><p>Коврики, мячи, шведская стенка, большое окно.</p></div>
-    <div class="card"><h4>Кабинет косметологии</h4><p>Кушетка, лампа-лупа, приглушённый свет.</p></div>
-    <div class="card"><h4>Кабинет ортопеда</h4><p>Макет позвоночника, корсет на стойке, плакат стопы, кушетка.</p></div>
-    <div class="card"><h4>Зал кинезиотерапии</h4><p>Подвесные петли, тренажёры, светлый.</p></div>
-    <div class="card"><h4>Коридор</h4><p>Переход между кабинетами — и между сценами.</p></div>
-    <div class="card"><h4>Белая циклорама</h4><p>Студия, ровный мягкий свет. Финальная сцена с командой.</p></div>
-  </div>
-
-  <h3 class="sub"><small>Настроение и атмосфера</small>Как это ощущается</h3>
+  <h3 class="sub"><small>Атмосфера и визуальный стиль</small>Как это ощущается</h3>
   <div class="grid g2">
-    <div class="card"><h4>Тон</h4><p><b>Тёплый, спокойный, без рекламного нажима.</b> Никто не улыбается в камеру до самого финала. Ощущение, что мы подсмотрели настоящий день клиники.</p></div>
-    <div class="card"><h4>Свет</h4><p>Мягкий дневной свет из окон и тёплые лампы прямо в кадре. Много воздуха и тени, никакого «стерильного» белого света.</p></div>
-    <div class="card"><h4>Цвет</h4><p>Приглушённая палитра: синяя форма, белые халаты, светлые стены. Бордовый кардиган бабушки — единственный тёплый акцент, он проходит через весь ролик.</p></div>
-    <div class="card"><h4>Движение</h4><p>Ролик читается как один непрерывный проход по клинике: камера уходит за плечо или дверной проём — и выходит уже в следующем кабинете.</p></div>
+    <div class="card"><h4>Настроение</h4><p><b>Тёплая, уютная атмосфера</b>, вызывающая доверие и ощущение заботы. Холодные оттенки — уместно, в интерьере и общей стилистике.</p></div>
+    <div class="card"><h4>Звук</h4><p><b>Добрый, располагающий саунд</b> и такой же закадровый голос. Спокойно и вдохновляюще, без рекламного нажима.</p></div>
+    <div class="card"><h4>Люди</h4><p>В кадре — <b>представители разных национальностей и рас</b>: клиника открыта и доступна каждому. Врачи — преимущественно азиатской и славянской внешности.</p></div>
+    <div class="card"><h4>Пространство</h4><p>Современная, светлая, чистая клиника. На стенах — названия направлений, они помогают зрителю понять, куда «переместился» кадр.</p></div>
   </div>
-
-  <h3 class="sub"><small>Сцены</small>Что происходит, по порядку</h3>
-  <div class="scene"><div class="k">1</div><div>
-    <h4>Встреча</h4>
-    <dl><dt>Где</dt><dd>Холл клиники, ресепшен.</dd>
-    <dt>Кто</dt><dd>Вся семья — мама, отец, сын, дочь, бабушка. Два администратора.</dd>
-    <dt>Что происходит</dt><dd>Семья входит через стеклянные двери, бабушка под руку с отцом. Администратор идёт навстречу. Женщина-администратор выходит из-за стойки, здоровается с дочкой, бабушка улыбается. Всех приглашают пройти к кабинетам.</dd>
-    <dt>Настроение</dt><dd>Спокойное и приветливое. Здесь ждали.</dd>
-    <dt>Голос</dt><dd class="vo">«В Medest приходят всей семьёй. Потому что здесь есть врач для каждого — от первых дней жизни до почтенного возраста».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">2</div><div>
-    <h4>Бабушка на осмотре</h4>
-    <dl><dt>Где</dt><dd>Кабинет терапевта.</dd>
-    <dt>Кто</dt><dd>Бабушка, врач-терапевт, медсестра.</dd>
-    <dt>Что происходит</dt><dd>Бабушка сидит на кушетке, кардиган лежит рядом. Медсестра надевает манжету и измеряет давление, все трое над чем-то смеются. Крупно — манжета и кнопка тонометра. Врач показывает результаты на мониторе, медсестра рядом с бесконтактным термометром.</dd>
-    <dt>Настроение</dt><dd>Бережное. Старшим здесь объясняют, а не отмахиваются.</dd>
-    <dt>Голос</dt><dd class="vo">«Мы бережно заботимся о здоровье старших: измеряем давление и температуру, и всегда спокойно объясняем, что они значат».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">3</div><div>
-    <h4>Лечебная физкультура</h4>
-    <dl><dt>Где</dt><dd>Зал ЛФК с большим окном.</dd>
-    <dt>Кто</dt><dd>Инструктор, второй сотрудник, группа пациентов разного возраста.</dd>
-    <dt>Что происходит</dt><dd>Инструктор показывает упражнение, группа на ковриках повторяет. Пожилой пациент поднимает мяч над головой — усилие и улыбка. Сотрудники ходят между пациентами и поправляют.</dd>
-    <dt>Настроение</dt><dd>Живое, чуть быстрее остальных сцен. Движение возвращается.</dd>
-    <dt>Голос</dt><dd class="vo">«Лечебная физкультура в группе помогает вернуть движение и уверенность — под присмотром опытных инструкторов».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">4</div><div>
-    <h4>Мама на косметологии</h4>
-    <dl><dt>Где</dt><dd>Кабинет косметологии, приглушённый свет.</dd>
-    <dt>Кто</dt><dd>Мама, косметолог, ассистентка.</dd>
-    <dt>Что происходит</dt><dd>Мама лежит на кушетке с закрытыми глазами. Косметолог наносит средство, ассистентка подаёт всё нужное. За окном вечер.</dd>
-    <dt>Настроение</dt><dd>Тихое. Время для себя.</dd>
-    <dt>Голос</dt><dd class="vo">«А ещё здесь можно просто позаботиться о себе — косметология с медицинским подходом».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">5</div><div>
-    <h4>Сын у ортопеда</h4>
-    <dl><dt>Где</dt><dd>Кабинет ортопеда.</dd>
-    <dt>Кто</dt><dd>Сын, врач-ортопед.</dd>
-    <dt>Что происходит</dt><dd>Врач держит макет позвоночника и объясняет, как корсет поддерживает спину; корсет стоит рядом, на стене плакат. Затем крупный план: врач осматривает стопу, проверяет свод большим пальцем.</dd>
-    <dt>Настроение</dt><dd>Внимательное, «разберёмся в причине».</dd>
-    <dt>Голос</dt><dd class="vo">«Если беспокоит спина, ортопед найдёт причину и объяснит, как ей помочь, — ведь осанка начинается со стоп».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">6</div><div>
-    <h4>Кинезиотерапия</h4>
-    <dl><dt>Где</dt><dd>Зал кинезиотерапии с подвесными петлями.</dd>
-    <dt>Кто</dt><dd>Дочь, кинезиотерапевт, группа пациентов.</dd>
-    <dt>Что происходит</dt><dd>Группа занимается на петлях, специалист поправляет дочке положение рук. Крупный план дочери: сосредоточенность, потом улыбка.</dd>
-    <dt>Настроение</dt><dd>Светлое, эмоциональный пик ролика. Музыка поднимается.</dd>
-    <dt>Голос</dt><dd class="vo">«Кинезиотерапия укрепляет тело и помогает восстановиться после травм — в любом возрасте».</dd></dl>
-  </div></div>
-  <div class="scene"><div class="k">7</div><div>
-    <h4>Команда</h4>
-    <dl><dt>Где</dt><dd>Студия, белая циклорама. Камера стоит неподвижно.</dd>
-    <dt>Кто</dt><dd>Все сотрудники клиники — девять человек.</dd>
-    <dt>Что происходит</dt><dd>В пустой белый кадр по одному входят сотрудники и занимают свои места, пока не соберётся вся команда. Первые — те, кто встречает; потом те, кто лечит. Все смотрят в камеру — единственный раз за ролик.</dd>
-    <dt>Настроение</dt><dd>Доверие, сплочённость, единство. Клиника — это люди.</dd>
-    <dt>Голос</dt><dd class="vo">«Мы — команда Medest. Разные специалисты, одна забота — ваше здоровье».</dd></dl>
-  </div></div>
 </div>
 </section>
 
@@ -370,213 +293,148 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="head">
     <div class="num">02</div>
     <div>
-      <div class="eyebrow">Блок второй</div>
+      <div class="caps">Блок второй</div>
       <h2>Тритмент</h2>
-      <p>Разработанные кадры и сцены. На каждый кадр — изображение, что в нём происходит и текст закадрового голоса.</p>
+      <p>Кадры ролика по порядку. На каждый — изображение, что происходит, голос за кадром и субтитр в нижней части кадра.</p>
     </div>
   </div>
 
   <div class="grid g3">
-    <div class="card"><h4>Камера</h4><p>Наблюдаем, а не ставим. Камера всегда в лёгком движении, длинная оптика, малая глубина резкости. До финала никто не смотрит в объектив.</p></div>
-    <div class="card"><h4>Монтаж</h4><p>Почти без прямых склеек: переходы через спину, плечо, лампу или дверной проём. Ролик читается как один проход по клинике.</p></div>
-    <div class="card"><h4>Звук</h4><p>Тёплый спокойный мужской голос. Живые шумы кабинетов: шаги, щелчок тонометра, дыхание, скрип петель. Сдержанное фортепиано и струнные под голосом.</p></div>
+    <div class="card"><h4>Камера</h4><p><b>Статичный кадр</b> напротив стойки приёмной, средне-общий план. Герой — на переднем плане слева, спиной или в 3/4; действие — в глубине кадра.</p></div>
+    <div class="card"><h4>Смена пространства</h4><p>Новый герой входит слева, <b>его силуэт перекрывает кадр — и за ним уже другой кабинет</b>. Склейка прячется в силуэте, ролик ощущается непрерывным.</p></div>
+    <div class="card"><h4>Голос и субтитры</h4><p>Один тёплый голос ведёт весь ролик. Внизу кадра — <b>короткий титр направления</b> и строка субтитров. Ритм: около 5–6 секунд на героя.</p></div>
   </div>
 
-  <!-- Сцена 1 -->
-  <div class="sc-head"><span class="k">1</span><h3>Встреча</h3><span>0:00–0:14 · 3 кадра</span></div>
+  <h3 class="sub"><small>Раскадровка</small>Семь кадров, 0:36</h3>
+
   <div class="frame">
-    <figure><img src="img/sc1a_semya_vhodit.jpg" alt="Семья входит в клинику"><figcaption>КАДР 01</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 1 · Встреча</span><span>0:00–0:05</span></div>
-      <h4>Семья входит в клинику</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Холл Medest, за стеклянными дверями дневной свет. Входит семья: бабушка под руку с отцом, за ними мама, сын и дочь. Администратор идёт им навстречу — мы видим его со спины.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«В Medest приходят всей семьёй».</p></div>
-      <p class="cam">С рук, медленный облёт администратора по дуге. Шаги, дверь, тихий гул холла.</p></div>
+    <div class="pics"><figure><img src="img/v2/a6_resepshn.jpg" alt="Пустая стойка приёмной Medest"><figcaption>КАДР 00 · ОТКРЫТИЕ</figcaption></figure></div>
+    <div class="t"><div class="meta"><span>Приёмная</span><span>0:00–0:04</span></div>
+      <h4>Стойка приёмной</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Статичный кадр напротив стойки приёмной. Светлый холл, логотип Medest на стене, за стойкой работают администраторы. Передний план пока пуст.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«В Medest приходят очень разные люди».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Medest<span>Медицинский центр</span></p></div>
+      <p class="cam">Штатив. Тихий гул холла, мягкое начало музыки.</p></div>
   </div>
+
   <div class="frame alt">
-    <figure><img src="img/sc1b_vstrecha_resepshn.jpg" alt="Приветствие у стойки"><figcaption>КАДР 02</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 1 · Встреча</span><span>0:05–0:10</span></div>
-      <h4>Приветствие у стойки</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Администратор выходит из-за стойки, наклоняется к дочке и здоровается. Бабушка стоит рядом и улыбается.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Потому что здесь есть врач для каждого —»</p></div>
-      <p class="cam">Плавный проезд к профилю администратора. Приветствие слышно приглушённо, без слов.</p></div>
-  </div>
-  <div class="frame">
-    <figure><img src="img/sc1c_semya_u_stoyki.jpg" alt="Вся семья и команда"><figcaption>КАДР 03</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 1 · Встреча</span><span>0:10–0:14</span></div>
-      <h4>Вся семья и команда</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Семья у стойки вместе с обоими администраторами. Администратор открытой ладонью приглашает пройти к кабинетам.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«от первых дней жизни до почтенного возраста».</p></div>
-      <p class="cam">Общий план, лёгкий наезд. Переход — за спину проходящего сотрудника.</p></div>
+    <div class="pics"><figure><img src="img/v2/a1_deti.jpg" alt="Девочка с игрушкой на переднем плане, на заднем — детский врач"><figcaption>КАДР 01 · ДЕТИ</figcaption></figure>
+      <div class="detail"><img src="img/v2/b1_deti.jpg" alt="Детский врач с игрушкой общается с девочкой"><p><b>Что происходит в глубине кадра:</b> детский врач держит такую же игрушку и разговаривает с ребёнком на его языке.</p></div></div>
+    <div class="t"><div class="meta"><span>Герой 1 · Педиатрия</span><span>0:04–0:10</span></div>
+      <h4>Маленькая девочка</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Слева в кадр входит маленькая девочка с игрушкой в руках. За ней приёмная превращается в детское отделение: яркие стены, игрушки, на стене — «Педиатрия». На заднем плане детский врач тоже держит игрушку и общается с ребёнком.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Самые маленькие — к врачу, который умеет говорить на их языке».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Дети<span>Забота с первых дней жизни</span></p></div>
+      <p class="cam">Камера неподвижна. Детский смех вдалеке.</p></div>
   </div>
 
-  <!-- Сцена 2 -->
-  <div class="sc-head"><span class="k">2</span><h3>Забота о старших</h3><span>0:14–0:26 · 3 кадра</span></div>
   <div class="frame">
-    <figure><img src="img/sc2a_babushka_davlenie.jpg" alt="Бабушка у терапевта"><figcaption>КАДР 04</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 2 · Забота о старших</span><span>0:14–0:19</span></div>
-      <h4>Бабушка у терапевта</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Кабинет терапевта. Бабушка сидит на кушетке, бордовый кардиган лежит рядом. Медсестра надевает манжету тонометра, врач с планшетом стоит рядом — все трое смеются.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Мы бережно заботимся о здоровье старших:»</p></div>
-      <p class="cam">Гимбал, мягкий наезд. Смех, шорох манжеты.</p></div>
+    <div class="pics"><figure><img src="img/v2/a2_starshie.jpg" alt="Бабушка с тростью на переднем плане, на заднем — две сотрудницы клиники"><figcaption>КАДР 02 · СТАРШЕЕ ПОКОЛЕНИЕ</figcaption></figure>
+      <div class="detail"><img src="img/v2/b2_starshie.jpg" alt="Две сотрудницы клиники рядом с бабушкой"><p><b>Что происходит в глубине кадра:</b> одна сотрудница заполняет данные, вторая проводит обследование. Внимательно и без спешки.</p></div></div>
+    <div class="t"><div class="meta"><span>Герой 2 · Терапия, диагностика</span><span>0:10–0:16</span></div>
+      <h4>Бабушка</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Силуэт пожилой женщины с тростью проходит слева — и за ней уже кабинет терапии: на стене «Терапия · Гериатрия · Диагностика». Две сотрудницы клиники: одна заполняет необходимые данные, вторая проводит обследование пациента.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Старшее поколение — за вниманием, терпением и точной диагностикой».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Старшее поколение<span>Забота на каждом этапе</span></p></div>
+      <p class="cam">Камера неподвижна. Стук трости, негромкий разговор.</p></div>
   </div>
+
   <div class="frame alt">
-    <figure><img src="img/sc2b_manzheta_krupno.jpg" alt="Давление, крупно"><figcaption>КАДР 05</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 2 · Забота о старших</span><span>0:19–0:22</span></div>
-      <h4>Давление, крупно</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Манжета на руке бабушки, пальцы медсестры нажимают кнопку тонометра. Лиц не видно.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«измеряем давление и температуру,»</p></div>
-      <p class="cam">Макро, почти статично. Крупный звук: щелчок кнопки, шипение манжеты.</p></div>
-  </div>
-  <div class="frame">
-    <figure><img src="img/sc2c_termometr_monitor.jpg" alt="Врач объясняет показатели"><figcaption>КАДР 06</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 2 · Забота о старших</span><span>0:22–0:26</span></div>
-      <h4>Врач объясняет показатели</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Врач показывает бабушке цифры на мониторе. Медсестра за ними держит бесконтактный термометр. Бабушка внимательно слушает.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«и всегда спокойно объясняем, что они значат».</p></div>
-      <p class="cam">Медленный проезд вдоль стола. Холодный свет монитора, тёплая лампа.</p></div>
+    <div class="pics"><figure><img src="img/v2/a3_aktiv.jpg" alt="Спортивный мужчина на переднем плане, на заднем — врач у экрана с позвоночником"><figcaption>КАДР 03 · АКТИВНАЯ ЖИЗНЬ</figcaption></figure>
+      <div class="detail"><img src="img/v2/b3_aktiv.jpg" alt="Врач показывает макет позвоночника спортивному мужчине"><p><b>Что происходит в глубине кадра:</b> врач на макете позвоночника и стопы объясняет, как они связаны и что делать.</p></div></div>
+    <div class="t"><div class="meta"><span>Герой 3 · Ортопедия</span><span>0:16–0:22</span></div>
+      <h4>Спортивный мужчина</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Слева появляется мужчина спортивного телосложения. Пространство меняется на кабинет ортопеда: кушетка, экран со снимком, на стене «Ортопедия · Спортивная медицина · Реабилитация». Врач показывает макет позвоночника и объясняет особенности положения спины и стоп.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Те, кто всегда в движении, — чтобы спина и стопы не подводили».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Активная жизнь<span>Движение без боли</span></p></div>
+      <p class="cam">Камера неподвижна. Музыка чуть набирает темп.</p></div>
   </div>
 
-  <!-- Сцена 3 -->
-  <div class="sc-head"><span class="k">3</span><h3>Лечебная физкультура</h3><span>0:26–0:37 · 2 кадра</span></div>
   <div class="frame">
-    <figure><img src="img/sc3a_lfk_gruppa.jpg" alt="Групповое занятие ЛФК"><figcaption>КАДР 07</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 3 · ЛФК</span><span>0:26–0:32</span></div>
-      <h4>Групповое занятие ЛФК</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Светлый зал ЛФК. Инструктор показывает упражнение, группа пациентов разного возраста повторяет за ним.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Лечебная физкультура в группе помогает вернуть движение и уверенность —»</p></div>
-      <p class="cam">С рук, проход сквозь группу; на переднем плане плечи пациентов. Счёт инструктора, дыхание, шорох ковриков.</p></div>
+    <div class="pics"><figure><img src="img/v2/a4_krasota.jpg" alt="Женщина в деловом костюме на переднем плане, на заднем — косметологическая процедура"><figcaption>КАДР 04 · КРАСОТА</figcaption></figure>
+      <div class="detail"><img src="img/v2/b4_krasota.jpg" alt="Косметолог проводит процедуру"><p><b>Что происходит в глубине кадра:</b> специалист в маске и перчатках проводит косметологическую процедуру. Спокойно, аккуратно.</p></div></div>
+    <div class="t"><div class="meta"><span>Герой 4 · Косметология</span><span>0:22–0:27</span></div>
+      <h4>Женщина-бизнесвумен</h4>
+      <div><div class="lbl">В кадре</div><p class="act">В кадр входит женщина в деловом образе, с сумкой на плече. За ней — кабинет косметологии: мягкий свет, на стене «Косметология · Эстетическая медицина · Дерматология». Специалист проводит косметологическую процедуру.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Те, у кого расписан каждый час, — за временем для себя».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Красота<span>Уверенность в себе</span></p></div>
+      <p class="cam">Камера неподвижна. Музыка становится мягче.</p></div>
   </div>
+
   <div class="frame alt">
-    <figure><img src="img/sc3b_lfk_pacient.jpg" alt="Пациент с мячом"><figcaption>КАДР 08</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 3 · ЛФК</span><span>0:32–0:37</span></div>
-      <h4>Пациент с мячом</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Пожилой пациент поднимает мяч над головой — усилие и улыбка. Позади сотрудница помогает другому пациенту.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«под присмотром опытных инструкторов».</p></div>
-      <p class="cam">Средний план, камера чуть ниже глаз. Выдох, короткий смешок.</p></div>
+    <div class="pics"><figure><img src="img/v2/a5_reab.jpg" alt="Дедушка с ходунками на переднем плане, на заднем — групповое занятие ЛФК"><figcaption>КАДР 05 · РЕАБИЛИТАЦИЯ</figcaption></figure>
+      <div class="detail"><img src="img/v2/b5_reab.jpg" alt="Групповое занятие ЛФК с инструкторами"><p><b>Что происходит в глубине кадра:</b> групповое занятие — инструкторы помогают пациентам, эспандеры, мячи, коврики.</p></div></div>
+    <div class="t"><div class="meta"><span>Герой 5 · ЛФК и кинезиотерапия</span><span>0:27–0:32</span></div>
+      <h4>Дедушка</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Слева медленно входит пожилой мужчина с ходунками. Пространство раскрывается в светлый зал реабилитации: на стене «ЛФК · Кинезиотерапия · Реабилитация», идёт групповое занятие с инструкторами.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«А кто-то — чтобы шаг за шагом вернуться к привычной жизни».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Реабилитация<span>Восстановление и новые возможности</span></p></div>
+      <p class="cam">Камера неподвижна. Счёт инструктора вдалеке, музыка поднимается к финалу.</p></div>
   </div>
 
-  <!-- Сцена 4 -->
-  <div class="sc-head"><span class="k">4</span><h3>Время для себя</h3><span>0:37–0:45 · 1 кадр</span></div>
   <div class="frame">
-    <figure><img src="img/sc4_mama_kosmetologiya.jpg" alt="Мама на косметологии"><figcaption>КАДР 09</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 4 · Время для себя</span><span>0:37–0:45</span></div>
-      <h4>Мама на косметологии</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Кабинет косметологии, приглушённый свет, лампа-лупа. Мама лежит на кушетке с закрытыми глазами. Косметолог наносит сыворотку, ассистентка держит поднос.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«А ещё здесь можно просто позаботиться о себе — косметология с медицинским подходом».</p></div>
-      <p class="cam">Медленный наезд мимо штатива лампы. Тишина кабинета, звон флакона.</p></div>
+    <div class="pics"><figure><img src="img/v2/b0_hero.jpg" alt="Приёмная Medest, пациенты у стойки"><figcaption>КАДР 06 · ФИНАЛ</figcaption></figure></div>
+    <div class="t"><div class="meta"><span>Приёмная · пэкшот</span><span>0:32–0:38</span></div>
+      <h4>Одна клиника для всех</h4>
+      <div><div class="lbl">В кадре</div><p class="act">Кадр возвращается к стойке приёмной. Теперь у стойки — люди, администраторы приветствуют их. Логотип Medest в центре. Появляются слоган и контакты.</p></div>
+      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Разные люди, разные задачи — одна клиника. Medest. Медицинский центр для всей семьи».</p></div>
+      <div class="sub-t"><div class="lbl">Титр внизу кадра</div><p>Medest — медицинский центр для всей семьи<span>[адрес] · [телефон] · [сайт]</span></p></div>
+      <p class="cam">Камера неподвижна. Музыка на пике, мягкое завершение.</p></div>
   </div>
 
-  <!-- Сцена 5 -->
-  <div class="sc-head"><span class="k">5</span><h3>Спина и осанка</h3><span>0:45–0:57 · 2 кадра</span></div>
-  <div class="frame">
-    <figure><img src="img/sc5a_syn_ortoped_maket.jpg" alt="Ортопед и макет позвоночника"><figcaption>КАДР 10</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 5 · Спина и осанка</span><span>0:45–0:52</span></div>
-      <h4>Ортопед и макет позвоночника</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Ортопед держит макет позвоночника и показывает сыну, как корсет поддерживает спину. Корсет стоит рядом. Сын внимательно слушает.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Если беспокоит спина, ортопед найдёт причину и объяснит, как ей помочь,»</p></div>
-      <p class="cam">Проезд от лампы на переднем плане к лицу сына. Голос врача неразборчиво.</p></div>
-  </div>
-  <div class="frame alt">
-    <figure><img src="img/sc5b_syn_stopa.jpg" alt="Осмотр стопы, крупно"><figcaption>КАДР 11</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 5 · Спина и осанка</span><span>0:52–0:57</span></div>
-      <h4>Осмотр стопы, крупно</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Врач держит стопу сына и большим пальцем проверяет свод.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«ведь осанка начинается со стоп».</p></div>
-      <p class="cam">Макро, почти статично. Тихо, шорох ткани.</p></div>
-  </div>
-
-  <!-- Сцена 6 -->
-  <div class="sc-head"><span class="k">6</span><h3>Кинезиотерапия</h3><span>0:57–1:08 · 2 кадра</span></div>
-  <div class="frame">
-    <figure><img src="img/sc6a_kinezio_gruppa.jpg" alt="Кинезиотерапия, группа"><figcaption>КАДР 12</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 6 · Кинезиотерапия</span><span>0:57–1:03</span></div>
-      <h4>Кинезиотерапия</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Светлый зал с подвесными петлями. Специалист поправляет дочке положение рук, вокруг занимаются другие пациенты.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Кинезиотерапия укрепляет тело и помогает восстановиться после травм —»</p></div>
-      <p class="cam">С рук, между петлями; петли на переднем плане. Скрип тросов, шаги.</p></div>
-  </div>
-  <div class="frame alt">
-    <figure><img src="img/sc6b_doch_krupno.jpg" alt="Дочь, крупно"><figcaption>КАДР 13</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 6 · Кинезиотерапия</span><span>1:03–1:08</span></div>
-      <h4>Дочь, крупно</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Лицо дочери: сосредоточенность сменяется улыбкой. Сзади — специалист.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«в любом возрасте».</p></div>
-      <p class="cam">85 мм, контровой свет в волосах, камера замирает. Пауза в голосе, музыка поднимается.</p></div>
-  </div>
-
-  <!-- Сцена 7 -->
-  <div class="sc-head"><span class="k">7</span><h3>Команда</h3><span>1:08–1:22 · 1 кадр, 9 резов</span></div>
-  <div class="frame">
-    <figure><img src="img/sc7_ciklorama.jpg" alt="Команда на циклораме"><figcaption>КАДР 14</figcaption></figure>
-    <div class="t"><div class="meta"><span>Сцена 7 · Команда</span><span>1:08–1:22</span></div>
-      <h4>Команда на циклораме</h4>
-      <div><div class="lbl">В кадре</div><p class="act">Белая циклорама, статичный план. Сотрудники клиники по одному входят в кадр и занимают свои места, пока не соберётся вся команда. Все смотрят в камеру.</p></div>
-      <div class="vo"><div class="lbl">Голос за кадром</div><p>«Мы — команда Medest. Разные специалисты, одна забота — ваше здоровье».</p></div>
-      <p class="cam">Штатив, статика. Девять резов, в каждом в кадре на одного человека больше. Музыка на пике.</p></div>
-  </div>
-
-  <div class="pack">
-    <div class="eyebrow" style="color:var(--acc)">Пэкшот · 1:22–1:30</div>
-    <div class="brand-big">Medest</div>
-    <div class="slogan">Здоровье всей семьи — в одном месте</div>
-    <div class="contacts">[адрес] · [телефон] · [сайт]</div>
-    <p class="note">Из белого фона циклорамы — в белый фон пэкшота, без склейки. Голос: «Medest. Здоровье всей семьи — в одном месте».</p>
-  </div>
-
-  <h3 class="sub"><small>Текст диктора целиком</small>Около 110 слов на 1:30</h3>
+  <h3 class="sub"><small>Текст диктора целиком</small>Около 70 слов на 36–38 секунд</h3>
   <table class="votable">
-    <tr><td>0:00–0:14</td><td>В Medest приходят всей семьёй. Потому что здесь есть врач для каждого — от первых дней жизни до почтенного возраста.</td></tr>
-    <tr><td>0:14–0:26</td><td>Мы бережно заботимся о здоровье старших: измеряем давление и температуру, и всегда спокойно объясняем, что они значат.</td></tr>
-    <tr><td>0:26–0:37</td><td>Лечебная физкультура в группе помогает вернуть движение и уверенность — под присмотром опытных инструкторов.</td></tr>
-    <tr><td>0:37–0:45</td><td>А ещё здесь можно просто позаботиться о себе — косметология с медицинским подходом.</td></tr>
-    <tr><td>0:45–0:57</td><td>Если беспокоит спина, ортопед найдёт причину и объяснит, как ей помочь, — ведь осанка начинается со стоп.</td></tr>
-    <tr><td>0:57–1:08</td><td>Кинезиотерапия укрепляет тело и помогает восстановиться после травм — в любом возрасте.</td></tr>
-    <tr><td>1:08–1:22</td><td>Мы — команда Medest. Разные специалисты, одна забота — ваше здоровье.</td></tr>
-    <tr class="end"><td>1:22–1:30</td><td>Medest. Здоровье всей семьи — в одном месте.</td></tr>
+    <tr><td>0:00–0:04</td><td>В Medest приходят очень разные люди.</td></tr>
+    <tr><td>0:04–0:10</td><td>Самые маленькие — к врачу, который умеет говорить на их языке.</td></tr>
+    <tr><td>0:10–0:16</td><td>Старшее поколение — за вниманием, терпением и точной диагностикой.</td></tr>
+    <tr><td>0:16–0:22</td><td>Те, кто всегда в движении, — чтобы спина и стопы не подводили.</td></tr>
+    <tr><td>0:22–0:27</td><td>Те, у кого расписан каждый час, — за временем для себя.</td></tr>
+    <tr><td>0:27–0:32</td><td>А кто-то — чтобы шаг за шагом вернуться к привычной жизни.</td></tr>
+    <tr class="end"><td>0:32–0:38</td><td>Разные люди, разные задачи — одна клиника. Medest. Медицинский центр для всей семьи.</td></tr>
   </table>
 </div>
 </section>
 
-<!-- ===================== 03 РЕФЕРЕНС ===================== -->
-<section class="block light" id="reference">
+<!-- ===================== 03 МУДБОРД ===================== -->
+<section class="block tint" id="moodboard">
 <div class="wrap">
   <div class="head">
     <div class="num">03</div>
     <div>
-      <div class="eyebrow">Блок третий</div>
-      <h2>Референс</h2>
-      <p>Ролик, по которому выстроены ритм, подача и приём монтажа. Людей, локации, текст и музыку не копируем.</p>
+      <div class="caps">Блок третий</div>
+      <h2>Мудборд</h2>
+      <p>Два листа настроения, из которых собрана раскадровка. Нажмите на лист, чтобы открыть его целиком.</p>
     </div>
   </div>
-  <div class="ref">
-    <div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/OSVA1FIQDOQ" title="OMA — Doctors. We lead you to better health" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-      <p class="linkline"><b>OMA — «Doctors. We lead you to better health»</b> (2020), Ontario Medical Association. Режиссёр Duane Crichton, Revolver Films; агентство Yield Branding.<br>
-      <a href="https://www.youtube.com/watch?v=OSVA1FIQDOQ" target="_blank" rel="noopener">Смотреть на YouTube</a> · <a href="https://vimeo.com/437267607" target="_blank" rel="noopener">на Vimeo</a> · <a href="https://the-message.ca/2020/01/28/oma-begins-a-branding-campaign-for-ontarios-doctors/" target="_blank" rel="noopener">о кампании</a></p>
-    </div>
-    <div>
-      <h3 class="sub" style="margin-top:0"><small>Что берём</small>Структура и приём</h3>
-      <ul>
-        <li><b>Структура:</b> сюжетная часть → серия портретов → заставка. У нас: 6 сцен → циклорама с командой → пэкшот.</li>
-        <li><b>Скрытые переходы:</b> камера уходит за спину, плечо, лампу или жалюзи, и там спрятана склейка. Ролик ощущается одним непрерывным движением.</li>
-        <li><b>Камера:</b> всегда в лёгком движении, длинная оптика, малая глубина резкости; портреты — статика.</li>
-        <li><b>Свет:</b> низкий ключ, лампы и окна прямо в кадре, тёплая кожа и холодные тени.</li>
-        <li><b>Ритм текста:</b> закадровый голос ведёт монтаж, склейки следуют за фразами, а не за музыкой.</li>
-      </ul>
-      <h3 class="sub"><small>Что не берём</small>Своё</h3>
-      <ul>
-        <li>Люди, локации и история — свои: семья и клиника «Медест».</li>
-        <li>Текст диктора и музыка — свои, референсные не используем.</li>
-        <li>Финал вместо девяти отдельных портретов — одна циклорама, где команда собирается в кадре.</li>
-      </ul>
-    </div>
+
+  <div class="boards">
+    <a href="img/v2/board_1.jpg" target="_blank" rel="noopener"><figure><img src="img/v2/board_1.jpg" alt="Мудборд 1: статичный кадр, герои-силуэты слева, пространство меняется"><figcaption><b>Лист 1 — кадры ролика.</b> Статичный кадр, силуэты и образы слева, пространство меняется.</figcaption></figure></a>
+    <a href="img/v2/board_2.jpg" target="_blank" rel="noopener"><figure><img src="img/v2/board_2.jpg" alt="Мудборд 2: Мозаика здоровья — сцены в кабинетах крупнее"><figcaption><b>Лист 2 — «Мозаика здоровья».</b> Те же сцены крупнее: что происходит в каждом кабинете.</figcaption></figure></a>
+  </div>
+
+  <h3 class="sub"><small>Цветовая палитра</small>Холодная основа, тёплые акценты</h3>
+  <div class="swatches">
+    <div class="sw"><i style="background:#22364C"></i>глубокий синий</div>
+    <div class="sw"><i style="background:#3F6F8F"></i>синий</div>
+    <div class="sw"><i style="background:#C9CDD2"></i>светло-серый</div>
+    <div class="sw"><i style="background:#D9C7B0"></i>песочный</div>
+    <div class="sw"><i style="background:#ECECEC"></i>почти белый</div>
+  </div>
+
+  <h3 class="sub"><small>Атмосфера и стиль</small>Какая клиника в кадре</h3>
+  <div class="words"><span>Современный</span><span>Уютный</span><span>Чистый</span><span>Светлый</span><span>Премиальный</span></div>
+
+  <div class="grid g3" style="margin-top:40px">
+    <div class="card"><h4>Кадры и ракурсы</h4><p><b>Статичный кадр.</b> Силуэты и образы слева, пространство меняется за ними. Для деталей — крупные и средние планы с естественной динамикой.</p></div>
+    <div class="card"><h4>Звук и тон</h4><p><b>Добрый, спокойный, вдохновляющий.</b> Музыка не спорит с голосом, а поддерживает его.</p></div>
+    <div class="card"><h4>Ключевые слова</h4><p>Тепло · доверие · забота · разные возрасты · одна клиника. <b>Здоровье людей — наша главная забота.</b></p></div>
   </div>
 </div>
 </section>
 
 <footer><div class="wrap">
-  <span>Medest · рекламный ролик · сценарий и тритмент v1</span>
-  <span>ChuDo production, Бишкек · сентябрь 2026</span>
+  <span>Medest · рекламный ролик «Мозаика здоровья» · сценарий и тритмент v2</span>
+  <span>ChuDo production, Бишкек · сентябрь 2026 · <a href="v1/">предыдущая версия</a></span>
 </div></footer>
 
 <script>
